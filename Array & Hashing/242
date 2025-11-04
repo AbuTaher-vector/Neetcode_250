@@ -1,0 +1,9 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        j = {}
+        k = {}
+        for x in s:
+            j[x] = j.get(x,0)+1
+        for x in t:
+            k[x] = k.get(x,0)+1
+        return j == k
