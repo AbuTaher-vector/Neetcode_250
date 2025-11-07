@@ -1,0 +1,6 @@
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        hashmp = {}
+        for x in nums:
+            hashmp[x] = hashmp.get(x,0)+1 
+        return max(hashmp, key=hashmp.get)
