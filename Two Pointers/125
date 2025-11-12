@@ -1,0 +1,20 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        new = ""
+        for ch in s:
+            if ch.isalpha():
+                new+=ch.lower()
+            elif ch.isdigit():
+                new+=ch
+        if len(new) == 0:
+            return True
+        start = 0
+        end = len(new)-1
+        while start < end:
+            if new[start] == new[end]:
+                start+=1
+                end-=1
+            else:
+                return False
+        return True
+
